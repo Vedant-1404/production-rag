@@ -1,4 +1,4 @@
-# P5 — Production RAG with Eval Pipeline
+# Production RAG with Eval Pipeline
 
 A production-grade Retrieval-Augmented Generation system built over a curated corpus of 12 ArXiv AI/ML research papers, with a full **RAGAS evaluation pipeline**, **LangSmith tracing**, **FastAPI** serving, and **Docker** containerization.
 
@@ -107,7 +107,7 @@ FastAPI /evaluate/latest  ← serve metrics via API
 ## Project Structure
 
 ```
-p5-production-rag/
+production-rag/
 ├── scripts/
 │   └── fetch_papers.py       # downloads 12 ArXiv PDFs automatically
 ├── ingestion/
@@ -140,8 +140,8 @@ p5-production-rag/
 ### 1. Clone and create virtual environment
 
 ```bash
-git clone https://github.com/Vedant-1404/p5-production-rag.git
-cd p5-production-rag
+git clone https://github.com/Vedant-1404/production-rag.git
+cd production-rag
 python3 -m venv venv
 source venv/bin/activate
 ```
@@ -282,6 +282,3 @@ The `data/` and `eval/` directories are volume-mounted so ChromaDB and eval resu
 | Tracing | LangSmith |
 | API | FastAPI + uvicorn |
 | Containerization | Docker + docker-compose |
-
----
-
